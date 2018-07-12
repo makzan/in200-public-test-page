@@ -58,9 +58,8 @@
     }
     
     function setAccessibilityFontSize(size) {
-      $("#name").val(size);
-      alert("Size: " + size);
-      document.write(size);
+      let fontSizeClass = size.replace("UICTContentSizeCategory","");
+      $("body").addClass(fontSizeClass);
     }
   </script>
 </body>
