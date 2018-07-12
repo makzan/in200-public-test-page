@@ -23,7 +23,13 @@
   </form>
   <script src="https://code.jquery.com/jquery.min.js"></script>
   <script>
-    document.write(window.navigator.userAgent);
+    // document.write(window.navigator.userAgent);
+    
+    let userAgent = window.navigator.userAgent;
+    
+    if (userAgent.indexOf("Demo App iOS")) {
+      $("h1").hide();
+    }
     
     function fillInForm(name, tel, mobileTel) {
       $("#name").val(name);
