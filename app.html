@@ -3,7 +3,28 @@
 </head>
 <body>
   <h1>Demo</h1>
+  <form id="form" action="">
+    <label>Name:
+      <input type="text" id="name" name="name">
+    </label>
+    
+    <label>Home Tel:
+      <input type="text" id="tel" name="tel">
+    </label>
+    
+    <label>Mobile Tel:
+      <input type="text" id="mobile-tel" name="mobile-tel">
+    </label>
+  </form>
+  <script src="https://code.jquery.com/jquery.min.js"></script>
   <script>
     document.write(window.navigator.userAgent);
+    
+    function fillInForm(name, tel, mobileTel) {
+      $("#name").val(name);
+      $("#tel").val(tel);
+      $("#mobile-tel").val(mobileTel);
+    }
+    
   </script>
 </body>
