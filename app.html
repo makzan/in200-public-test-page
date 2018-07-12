@@ -53,6 +53,8 @@
       $("#name").val(name);
       $("#tel").val(tel);
       $("#mobile-tel").val(mobileTel);
+      
+      window.webkit.messageHandlers.notification.postMessage({ body: {hello: "world"} });
     }
     
   </script>
