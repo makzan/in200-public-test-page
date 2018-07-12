@@ -54,11 +54,12 @@
       $("#tel").val(tel);
       $("#mobile-tel").val(mobileTel);
       
-      window.webkit.messageHandlers.notification.postMessage({ body: {hello: "world"} });
+      //window.webkit.messageHandlers.notification.postMessage({ body: {hello: "world"} });
     }
     
     function setAccessibilityFontSize(size) {
-      alert(size);
+      $("#name").val(size);
+      alert("Size: " + size);
       document.write(size);
     }
   </script>
