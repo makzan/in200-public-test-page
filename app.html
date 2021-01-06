@@ -50,6 +50,8 @@
     
   </form>
   
+  <p>Debug: <span id="preferredContentSizeCategory"></span></p>
+  
   <footer>Footer placeholder.</footer>
   
   <script src="https://code.jquery.com/jquery.min.js"></script>
@@ -65,9 +67,13 @@
     function fillInForm(name, tel, mobileTel) {
       $("#name").val(name);
       $("#tel").val(tel);
-      $("#mobile-tel").val(mobileTel);
-            
+      $("#mobile-tel").val(mobileTel);            
     }
+    
+    function setAccessibilityFontSize(size) {
+      $("#preferredContentSizeCategory").text(size);
+    }
+    
     $("#send-back").on('click', function(){
       window.webkit.messageHandlers.notification.postMessage({ body: {hello: "world from web"} });
     });
