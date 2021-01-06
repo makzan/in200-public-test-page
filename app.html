@@ -41,7 +41,7 @@
     </label>
     
     <label>Income
-      <input type="number" pattern="[0-9]*" name="income">
+      <input type="number" id="income" pattern="[0-9]*" name="income">
     </label>
     
     <label>
@@ -76,8 +76,15 @@
     }
     
     $("#send-back").on('click', function(){
+      var data = {
+        'name': $("#name").val(),
+        'tel': $("#tel").val(),
+        'mobileTel': $("#mobile-tel").val(),
+        'income': $("#income").val()
+      }
+      
       // The "notification" has to match the name of userContentController in Swift.
-      window.webkit.messageHandlers.notification.postMessage({ hello: "world from web/JS"} );
+      window.webkit.messageHandlers.notification.postMessage({ hello: "world from web/JS", data: data} );
     });
   </script>
 </body>
