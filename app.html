@@ -44,6 +44,10 @@
       <input type="number" pattern="[0-9]*" name="income">
     </label>
     
+    <label>
+      <input type="button" id="send-back" value="Send back to iOS">
+    </label>
+    
   </form>
   
   <footer>Footer placeholder.</footer>
@@ -62,8 +66,10 @@
       $("#name").val(name);
       $("#tel").val(tel);
       $("#mobile-tel").val(mobileTel);
-      
-      //window.webkit.messageHandlers.notification.postMessage({ body: {hello: "world"} });
+            
     }
+    $("#send-back").on('click', function(){
+      window.webkit.messageHandlers.notification.postMessage({ body: {hello: "world from web"} });
+    });
   </script>
 </body>
