@@ -76,6 +76,7 @@
     }
     
     $("#send-back").on('click', function(){
+      // The "notification" has to match the name of userContentController in Swift.
       window.webkit.messageHandlers.notification.postMessage({ body: {hello: "world from web"} });
     });
   </script>
