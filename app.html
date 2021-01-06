@@ -1,34 +1,15 @@
 <head>
+  <!-- Please make sure user-scalable=no is only used carefully -->
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <style>
+    
     body {
-      font-family: system-ui;
+      font: -apple-system-body;
       padding: 16px;
       margin: 0;
     }
-    body.XL {
-      font-size: 1.1rem;
-    }
-    body.XXL {
-      font-size: 1.2rem;
-    }
-    body.XXXL {
-      font-size: 1.3rem;
-    }
-    body.AccessibilityM {
-      font-size: 1.5rem;
-    }
-    body.AccessibilityL {
-      font-size: 1.6rem;
-    }
-    body.AccessibilityXL {
-      font-size: 1.7rem;
-    }
-    body.AccessibilityXXL {
-      font-size: 1.8rem;
-    }
-    body.AccessibilityXXXL {
-      font-size: 2rem;
+    footer {
+      font: -apple-system-footnote;
     }
     label {
       display: block;
@@ -64,6 +45,9 @@
     </label>
     
   </form>
+  
+  <footer>Footer placeholder.</footer>
+  
   <script src="https://code.jquery.com/jquery.min.js"></script>
   <script>
     // document.write(window.navigator.userAgent);
@@ -80,11 +64,6 @@
       $("#mobile-tel").val(mobileTel);
       
       //window.webkit.messageHandlers.notification.postMessage({ body: {hello: "world"} });
-    }
-    
-    function setAccessibilityFontSize(size) {
-      let fontSizeClass = size.replace("UICTContentSizeCategory","");
-      $("body").addClass(fontSizeClass);
     }
   </script>
 </body>
